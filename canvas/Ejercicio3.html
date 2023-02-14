@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!--Etqueta estandar de HTML5-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio 3</title>
+    <style type="text/css">
+      body
+        {
+          background-image: url("./1.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover
+        }
+        h1,h3,strong,table{
+          color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <div style="text-align:center;">
+      <table style="width:100%" ali>
+            <tr>
+              <th colspan="2"><h1>Ejercicio 3</h1></th>
+            </tr>
+            <tr>
+              <th><h3> Tu Edad del Año Pasado<br> y Cuanto cumpliras el Proximo Año </h3></th>
+            </tr>
+            <tr>
+              <form name="form1">
+                <table style="width:100%">
+                  <tr>
+                    <td>¿Cual es Tu Nombre?<input type="text" name="nombre" size="20"><br></td>
+                  </tr>
+                  <tr>
+                    <td>¿Cual es Tu Edad?<input type="text" name="edad" size="10"><br></td>
+                  </tr>
+
+                  <tr>
+                    <td><input type="button" value="enviar" onClick="Confirmaredad()"></td>
+                  </tr>
+                </table>
+              </form>
+            </tr>
+      </table>
+    </div>
+      <script languaje="javascript">
+      function Confirmaredad()
+      {
+        var formulario="";
+        var nombre    = document.form1.nombre.value;
+        var edad      = document.form1.edad.value;
+        var aproximo  = 2;
+        var apasado   = 1;
+        var edadpasada;
+        var edadproxima;
+
+
+        if( edad <= 20)
+        {
+
+          edadAct = edad;
+          edadpasada  = edadAct - apasado;
+          edadproxima =((edadAct - apasado) + aproximo);
+
+        }
+        else if(edad >= 20)
+        {
+
+          edadAct = edad;
+          edadpasada  = edadAct - apasado;
+          edadproxima =((edadAct - apasado) + aproximo);
+
+        }
+
+        document.write("<strong>"+ nombre +" El año pasado Tenias " + edadpasada + " Años y El proximo año Cumpliras "+ edadproxima +"</strong>");
+      }
+      </script>
+  </body>
+</html>
