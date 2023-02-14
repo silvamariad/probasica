@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!--Etqueta estandar de HTML5-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tu peso en un lugar donde pesas menos</title>
+    <style type="text/css">
+      body
+        {
+          background-image: url("./2.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover
+        }
+        h1,h3,strong,table{
+          color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <script languaje="javascript">
+    function Confirmarpeso()
+    {
+      var formulario="";
+      var tupeso    = document.form1.tupeso.value;
+      var planeta   = document.form1.planeta.value;
+      var g_tierra  = 9.8;
+      var g_marte   = 3.7;
+      var g_jupiter = 24.8;
+      var peso_final;
+
+      if(planeta == 1)
+      {
+        no_paneta  ="Marte"
+        peso_final = tupeso * g_marte / g_tierra;
+      }
+      else if(planeta == 2)
+      {
+        no_paneta  ="Jupiter"
+        peso_final = tupeso * g_jupiter / g_tierra;
+      }
+      else
+      {
+        no_paneta  ="kripton"
+        peso_final=100000000;
+      }
+      peso_final = parseInt(peso_final);
+      document.write("<strong>Tu peso en "+ no_paneta +" es " + peso_final + " kilos </strong>");
+      //(enviar)?form.reset():'return false';
+      alert(formulario);
+    }
+    </script>
+    <table style="width:100%">
+    <tr>
+      <th colspan="2"><h1>Tu Peso en Otro Planeta</h1></th>
+    </tr>
+    <tr>
+      <th><h3>En la tierra pesas Distinto que en Marte o Jupeter</h3></th>
+    </tr>
+    <tr>
+      <form name="form1">
+        <table style="width:100%">
+          <tr>
+            <td>¿Cual es Tu Peso?<input type="text" name="tupeso" size="20"><br></td>
+          </tr>
+          <tr>
+            <td>Elige tu planeta
+            <select name="planeta" id="planeta">
+                    <option value="">-Seleccione-</option>
+                    <option value="1">Marte</option>
+                    <option value="2">Jupiter</option>
+                    <option value="3">Kripton</option>
+            </select>
+            </td>
+          </tr>
+          <tr>
+            <!--<td><input type="button" value="enviar" onClick="Confirmarpeso(this.form)"></td>-->
+            <td><input type="button" value="enviar" onClick="Confirmarpeso()"></td>
+          </tr>
+          <tr>
+            <td><img src="../otropla/3.jpg" alt="Imagen"></td>
+          </tr>
+        </table>
+    </form>
+    </tr>
+    </table>
+  </body>
+</html>
