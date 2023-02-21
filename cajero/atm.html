@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automatico</title>
+</head>
+<body>
+    <h1>Bienvenido a Tu Bank Conf </h1>
+    <table style="text-align:center;">
+        <tr>
+            <td><img src="cajero.gif"/></td>
+        </tr>
+        <tr>
+            <td><h2>Cajero Automatico</h2></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="dinero" /></td>
+            <td><input type="button" value="Extraer" id="extraer"/>
+            <td><input type="button" value="Refrescar Cajero" onclick="javascript:window.location.reload();"/></td>
+            </tr>
+        <tr>
+            <td><p id="resultado"></p></td>
+        </tr>
+    </table>
+    <script src="cajero.js"></script>
+</body>
+</html>
